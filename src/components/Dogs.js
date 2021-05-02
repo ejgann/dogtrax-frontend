@@ -7,7 +7,8 @@ const Dogs = (props) => {
     return (
         <div>
             <h2>Dogs</h2>
-            {props.dogs.map(dog => <li key={dog.id}>{dog.name} - age: {dog.age} - gender: {dog.gender} - breed: {dog.breed} - {dog.notes}</li>)}
+            {/* {props.dogs.map(dog => <li key={dog.id}>{dog.name} - age: {dog.age} - gender: {dog.gender} - breed: {dog.breed} - {dog.notes}</li>)} */}
+            {props.dogs.map(dog => <li key={dog.id}>{dog.name} - age: {dog.age} - {dog.ownerInfo}</li>)}
         </div>
     )
     
