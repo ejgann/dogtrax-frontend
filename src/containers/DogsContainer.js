@@ -17,7 +17,7 @@ class DogsContainer extends React.Component {
         return (
             <div>
                 <DogForm />
-                <Dogs />
+                <Dogs dogs={this.props.dogs}/>
             </div>
 
         )

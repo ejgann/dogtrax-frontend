@@ -10,5 +10,6 @@ export function fetchDogs() {
 }
 
 
-
 // fetchDogs creates an actionObject, which is dispatched to reducer which will then create new version of state based on the action that is sent
+
+// thunk enables us to use (dispatch) function to access returned fetch data inside our action creator instead of {connect} dispatching the function
