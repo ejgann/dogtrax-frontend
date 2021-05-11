@@ -18,12 +18,12 @@ class DogForm extends React.Component {
     handleChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value
-        });
+        })
     }
 
     handleSubmit = (event) => {
-        event.preventDefault();
-        this.props.addDog(this.state)
+        event.preventDefault()
+        this.props.addDog(this.state);
     }
 
     
