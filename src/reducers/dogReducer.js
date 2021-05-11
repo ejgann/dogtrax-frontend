@@ -7,7 +7,8 @@ function dogReducer(state = {dogs: []}, action) {
 
         case 'ADD_DOG':
             return {...state, dogs: [...state.dogs, action.payload]}
-
+// spread operator maintains all existing dogs currently in state
+// dogs key value pair incorporates all existing dogs in state while adding the newly created dog
 
 
         default:
