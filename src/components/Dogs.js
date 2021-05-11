@@ -1,4 +1,5 @@
 import React from 'react';
+import {Route, Link} from 'react-router-dom';
 import Dog from './Dog';
 // functional component since only going to render a list of dogs
 
@@ -9,7 +10,9 @@ const Dogs = (props) => {
         <div>
             <h2>Dogs</h2>
             {props.dogs.map(dog => 
-                <div key={dog.id}><Dog dog={dog} /></div>)}
+                <li key={dog.id}>
+                    <Link to={`/dogs/${dog.id}`}>{dog.name}</Link>
+                </li>)}
         </div>
         // iterating over dogs in store; for each dog, want to create a dog component and must accept a dog as props
     )
