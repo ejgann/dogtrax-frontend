@@ -7,6 +7,7 @@ import {Route} from 'react-router-dom';
 import {fetchDogs} from '../actions/fetchDogs'
 import DogForm from '../components/DogForm'
 import Dogs from '../components/Dogs'
+import Dog from '../components/Dog'
 
 class DogsContainer extends React.Component {
     
@@ -18,8 +19,8 @@ class DogsContainer extends React.Component {
         return (
             <div>
                 <Route path='/dogs/new' component={DogForm} />
-                <br></br>
-                <Route exact path='/dogs' render={() => <Dogs dogs={this.props.dogs}/> } />
+                <Route path='/dogs/:id' render={(routerProps) => <Dog {...routerProps} dogs={this.props.dogs} />} />
+                <Route exact path='/dogs' render={(routerProps) => <Dogs {...routerProps} dogs={this.props.dogs}/> } />
             </div>
 
         )
