@@ -4,9 +4,16 @@ import {addDog} from '../actions/addDog';
 
 // will be a controlled form (i.e. state), which needs to be a class component
 class DogForm extends React.Component {
-    state = {name: '', age: '', gender: '', breed: '', notes: '', owner: ''}
+    
+    state = {
+        name: '', age: '', gender: '', breed: '', notes: ''
+    }
+    // dropdown yes/no
+    // form data
+
     // have to add state (locally here, instead of in Redux store) so this form below is a controlled form
     // if want to edit this info, makes sense to have redux store state instead
+
 
     handleChange = (event) => {
         this.setState({
@@ -15,13 +22,9 @@ class DogForm extends React.Component {
     }
 
     handleSubmit = (event) => {
-        event.preventDefault()
+        event.preventDefault();
         this.props.addDog(this.state)
     }
-
-    // handleSelect = (event) => {
-    //     console.log(event);
-    // }
 
     
     render() {
@@ -42,15 +45,6 @@ class DogForm extends React.Component {
                     <br></br>
 
                     <label>Special Notes:</label> <textarea placeholder='Notes' value={this.state.notes} name='notes' onChange={this.handleChange}></textarea>
-                    <br></br>
-
-                    <label>Existing Owner?</label> 
-                    <select name="owner" onChange={this.handleChange} value={this.state.owner}>
-                    <option value=""></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                    </select>
-                    
 
                     <br></br>
 
