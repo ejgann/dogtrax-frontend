@@ -3,6 +3,7 @@
 
 import React from 'react'
 import {connect} from 'react-redux';
+import {Route} from 'react-router-dom';
 import {fetchDogs} from '../actions/fetchDogs'
 import DogForm from '../components/DogForm'
 import Dogs from '../components/Dogs'
@@ -16,8 +17,9 @@ class DogsContainer extends React.Component {
     render() {
         return (
             <div>
-                <DogForm />
-                <Dogs dogs={this.props.dogs}/>
+                <Route path='/dogs/new' component={DogForm} />
+                <br></br>
+                <Route exact path='/dogs' render={() => <Dogs dogs={this.props.dogs}/> } />
             </div>
 
         )
