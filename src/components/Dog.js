@@ -2,13 +2,14 @@ import React from 'react'
 import {Redirect} from 'react-router-dom';
 import ReportsContainer from '../containers/ReportsContainer';
 
+
 const Dog = (props) => {
 
     let dog = props.dogs[props.match.params.id - 1]
 console.log(dog);
 
     return (
-        <div>
+        <div className ="DogCard">
 
           <h2> {dog ? dog.name : null} </h2>
           Age: <p> {dog ? dog.age : null} </p>
