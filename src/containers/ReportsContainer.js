@@ -7,7 +7,7 @@ class ReportsContainer extends Component {
     render() {
         return (
             <div>
-                <ReportForm />
+                <ReportForm dog={this.props.dog}/>
                 <Reports reports={this.props.dog && this.props.dog.reports}/>
             </div>
         )

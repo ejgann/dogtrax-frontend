@@ -6,7 +6,7 @@ import {addDog} from '../actions/addDog';
 class DogForm extends React.Component {
     
     state = {
-        name: '', age: '', gender: '', breed: '', notes: ''
+        name: '', age: '', gender: 'female', breed: '', notes: ''
     }
     // dropdown yes/no
     // form data

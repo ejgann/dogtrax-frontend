@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
+import { addReport } from '../actions/addReport';
+import Dog from './Dog';
 
 class ReportForm extends Component {
     state = {
@@ -12,11 +14,23 @@ class ReportForm extends Component {
             selectOption: event.target.value
         });
     };
+
+    handleChange = (event) => {
+        this.setState({
+        [event.target.name]: event.target.value
+        })
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+        // addReport(this.state, this.props.id)
+    }
     
     render() {
         return (
             <div>
-                <form>
+                <h2>Write a New Report for {this.props.dog.name}</h2>
+                <form onSubmit={this.handleSubmit}>
                     <label>Date:</label>
 
                     <br></br>
@@ -61,7 +75,7 @@ class ReportForm extends Component {
                         name='comments'
                         value={this.state.comments} 
                         onChange={this.handleChange}></textarea>
-
+                    <input type="submit" />
                 </form>
             </div>
         )
