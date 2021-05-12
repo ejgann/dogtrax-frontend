@@ -3,6 +3,7 @@ import React from 'react'
 const Reports = (props) => {
     console.log(props);
     
+
     return (
         <div>
             <h3>Reports</h3>

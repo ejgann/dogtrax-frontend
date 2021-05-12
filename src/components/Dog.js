@@ -6,7 +6,6 @@ import ReportsContainer from '../containers/ReportsContainer';
 const Dog = (props) => {
 
     let dog = props.dogs[props.match.params.id - 1]
-console.log(dog);
 
     return (
         <div className ="DogCard">
