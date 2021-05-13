@@ -8,8 +8,7 @@ class DogForm extends React.Component {
     state = {
         name: '', age: '', gender: 'female', breed: '', notes: ''
     }
-    // dropdown yes/no
-    // form data
+
 
     // have to add state (locally here, instead of in Redux store) so this form below is a controlled form
     // if want to edit this info, makes sense to have redux store state instead

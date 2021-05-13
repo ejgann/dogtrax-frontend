@@ -8,15 +8,15 @@ const Dog = (props) => {
     let dog = props.dogs[props.match.params.id - 1]
 
     return (
-        <div className ="DogCard">
+        <div>
 
-          <h2> {dog ? dog.name : null} </h2>
-          Age: <p> {dog ? dog.age : null} </p>
-          Gender: <p> {dog ? dog.gender : null} </p>
-          Breed: <p> {dog ? dog.breed : null} </p>
-          Notes: <p> {dog ? dog.notes : null} </p>
-          <br></br>
-            <ReportsContainer dog={dog}/>
+                <h2> {dog ? dog.name : null} </h2>
+                    Age: <p> {dog ? dog.age : null} </p>
+                    Gender: <p> {dog ? dog.gender : null} </p>
+                    Breed: <p> {dog ? dog.breed : null} </p>
+                    Notes: <p> {dog ? dog.notes : null} </p>
+                 <br></br>
+                <ReportsContainer dog={dog}/>
         </div>
     )
 } 

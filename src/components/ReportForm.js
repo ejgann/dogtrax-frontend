@@ -3,18 +3,13 @@ import {connect} from 'react-redux'
 import { addReport } from '../actions/addReport';
 import Dog from './Dog';
 
+
 class ReportForm extends Component {
     state = {
-        form: {date: '', pee: '', poop: '', comments: ''},
-        selectOption: ''
+        date: '', pee: '', poop: '', comments: ''
     }
 
-    handleOptionChange = (event) => {
-        this.setState({
-            selectOption: event.target.value
-        });
-    };
-
+    
     handleChange = (event) => {
         this.setState({
         [event.target.name]: event.target.value
@@ -23,64 +18,46 @@ class ReportForm extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        // addReport(this.state, this.props.id)
+        this.props.addReport(this.state, this.props.dog.id)
+        this.setState({
+            date: '', pee: '', poop: '', comments: ''
+        })
     }
     
     render() {
         return (
             <div>
-                <h2>Write a New Report for {this.props.dog.name}</h2>
+                <h4>Write a New Report</h4>
                 <form onSubmit={this.handleSubmit}>
                     <label>Date:</label>
+                    <br></br>
+                    <br></br>
+                    <label>Did dog pee?</label> <select value={this.state.pee} name='pee' onChange={this.handleChange}>
+                        <option value=''></option>
+                        <option value='yes'>Yes</option>
+                        <option value='no'>No</option>
+                        </select>
 
-                    <br></br>
-                    Pee?
-                    <br></br>
-                    <label>Yes</label>{' '}
-                        <input
-                            type='radio'
-                            name='pee'
-                            value={this.state.pee}
-                            checked={this.state.selectOption === 'yes'}
-                            onChange={this.handleOptionChange} />
-                            {' '}
-                        <label>No</label>{' '}
-                        <input
-                            type='radio'
-                            name='pee'
-                            value={this.state.pee}
-                            checked={this.state.selectOption === 'no'}
-                            onChange={this.handleOptionChange} />
-                    <br></br>
-                    Poop?
-                    <br></br>
-                    <label>Yes</label>{' '}
-                        <input 
-                            type='radio'
-                            name='poop'
-                            value={this.state.poop}
-                            checked={this.state.selectOption === 'yes'}
-                            onChange={this.handleOptionChange} />
-                            {' '}
-                    <label>No</label>{' '}
-                        <input
-                            type='radio'
-                            name='poop'
-                            value={this.state.poop}
-                            checked={this.state.selectOption === 'no'}
-                            onChange={this.handleOptionChange} />
+                        <br></br>
+                        <br></br>
+
+                        <label>Did dog poop?</label> <select value={this.state.poop} name='poop' onChange={this.handleChange}>
+                        <option value=''></option>
+                        <option value='yes'>Yes</option>
+                        <option value='no'>No</option>
+                        </select>
                     <br></br>
                     <label>Comments:</label>{' '}
                         <textarea placeholder='Comments' 
                         name='comments'
                         value={this.state.comments} 
                         onChange={this.handleChange}></textarea>
+                    <br></br>
                     <input type="submit" />
                 </form>
             </div>
         )
     }
 }
-// date, pee, poop, comments
 
-export default connect(null)(ReportForm);
+export default connect(null, {addReport})(ReportForm);

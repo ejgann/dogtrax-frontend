@@ -9,6 +9,6 @@ export const addReport = (report, dogId) => {
             body: JSON.stringify(report)
         })
         .then(response => response.json())
-        .then(report => dispatch({type: 'ADD_REPORT', payload: report}))
+        .then(dog => dispatch({type: 'ADD_REPORT', payload: dog}))
     }
 }
