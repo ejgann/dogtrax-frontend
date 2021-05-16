@@ -1,10 +1,9 @@
-import React, { Component } from 'react'
-import {connect} from 'react-redux'
+import React from 'react'
+import {connect} from 'react-redux';
 import { addReport } from '../actions/addReport';
-import Dog from './Dog';
 
+class ReportForm extends React.Component {
 
-class ReportForm extends Component {
     state = {
         date: '', pee: '', poop: '', comments: ''
     }
@@ -29,31 +28,54 @@ class ReportForm extends Component {
             <div>
                 <h4>Write a New Report</h4>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Date:</label>
+                    <label>Date:</label> 
+                    <input 
+                        type='date' 
+                        value={this.state.date} 
+                        name='date' 
+                        onChange={this.handleChange} 
+                    />
+                    
                     <br></br>
                     <br></br>
-                    <label>Did dog pee?</label> <select value={this.state.pee} name='pee' onChange={this.handleChange}>
-                        <option value=''></option>
-                        <option value='yes'>Yes</option>
-                        <option value='no'>No</option>
-                        </select>
+                    
+                    <label>Did dog pee?</label> 
+                    <select 
+                        value={this.state.pee} 
+                        name='pee' 
+                        onChange={this.handleChange}>
+                            <option></option>
+                            <option>Yes</option>
+                            <option>No</option>
+                    </select>
 
                         <br></br>
                         <br></br>
 
-                        <label>Did dog poop?</label> <select value={this.state.poop} name='poop' onChange={this.handleChange}>
-                        <option value=''></option>
-                        <option value='yes'>Yes</option>
-                        <option value='no'>No</option>
-                        </select>
+                    <label>Did dog poop?</label> 
+                    <select 
+                        value={this.state.poop} 
+                        name='poop' 
+                        onChange={this.handleChange}>
+                            <option></option>
+                            <option>Yes</option>
+                            <option>No</option>
+                    </select>
+
                     <br></br>
+                    <br></br>
+
                     <label>Comments:</label>{' '}
-                        <textarea placeholder='Comments' 
+                    <textarea placeholder='Comments' 
                         name='comments'
                         value={this.state.comments} 
-                        onChange={this.handleChange}></textarea>
+                        onChange={this.handleChange}>
+                    </textarea>
+
                     <br></br>
-                    <input type="submit" />
+                    <input 
+                        type="submit" 
+                    />
                 </form>
             </div>
         )

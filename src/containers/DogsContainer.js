@@ -5,9 +5,9 @@ import React from 'react'
 import {connect} from 'react-redux';
 import {Route, Switch} from 'react-router-dom';
 import {fetchDogs} from '../actions/fetchDogs'
-import DogForm from '../components/DogForm'
 import Dogs from '../components/Dogs'
 import Dog from '../components/Dog'
+import DogForm from '../components/DogForm'
 
 class DogsContainer extends React.Component {
     

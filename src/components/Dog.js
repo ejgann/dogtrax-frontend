@@ -5,7 +5,10 @@ import ReportsContainer from '../containers/ReportsContainer';
 
 const Dog = (props) => {
 
-    let dog = props.dogs[props.match.params.id - 1]
+    // let dog = props.dogs[props.match.params.id - 1]
+    let dog = props.dogs.filter(dog => dog.id == props.match.params.id)[0]
+    
+    console.log(dog)
 
     return (
         <div>
