@@ -16,7 +16,8 @@ class ReportForm extends React.Component {
     }
 
     handleSubmit = (event) => {
-        event.preventDefault()
+        event.preventDefault();
+        console.log('event form submit');
         this.props.addReport(this.state, this.props.dog.id)
         this.setState({
             date: '', pee: '', poop: '', comments: ''

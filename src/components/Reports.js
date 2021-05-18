@@ -3,6 +3,7 @@ import React from 'react'
 const Reports = (props) => {
 
     console.log(props.reports);
+    // debugger;
 
     return (
         <div>

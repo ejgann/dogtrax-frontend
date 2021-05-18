@@ -1,6 +1,7 @@
 import React from 'react'
 import {Redirect} from 'react-router-dom';
 import ReportsContainer from '../containers/ReportsContainer';
+import EditDog from './EditDog';
 
 
 const Dog = (props) => {
@@ -20,6 +21,8 @@ const Dog = (props) => {
                     Notes: <p> {dog ? dog.notes : null} </p>
                  <br></br>
                 <ReportsContainer dog={dog}/>
+                <br></br>
+                {/* <EditDog dog={dog} /> */}
         </div>
     )
 } 
