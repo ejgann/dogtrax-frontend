@@ -12,13 +12,10 @@ import DogForm from '../components/DogForm'
 class DogsContainer extends React.Component {
     
     componentDidMount() {
-        console.log("mounted component");
         this.props.fetchDogs()
     }
     
     render() {
- console.log("rendering!");
-
         return (
             <div>
                 <Switch>

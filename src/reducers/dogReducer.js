@@ -18,10 +18,12 @@ function dogReducer(state = {dogs: []}, action) {
                 } else {
                     return dog
                 }
+            })
+            
         // utilizing original dogs array coming in at top from state
         // iterating through them, checking if id from dog from backend matches current dog id in iteration
         // if it matches, want to replace that dog; if not, leave it
-            })
+            
         // case 'EDIT_DOG':
             // let dogs = state.dogs.map(dog => 
             //     {

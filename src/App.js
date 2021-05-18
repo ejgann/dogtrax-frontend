@@ -1,8 +1,10 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import { Container, Jumbotron } from 'react-bootstrap';
+// import {connect} from 'react-redux';
+import { Container, Jumbotron, Image } from 'react-bootstrap';
 import DogsContainer from './containers/DogsContainer'
+import ReportsContainer from './containers/ReportsContainer'
 import './App.css';
+
 
 class App extends React.Component {
   render() {
@@ -12,6 +14,7 @@ class App extends React.Component {
         <Container className="container">
           <Jumbotron>
             <h1>DogTrax</h1>
+            
           </Jumbotron>
           <DogsContainer />
           </Container>
@@ -19,11 +22,7 @@ class App extends React.Component {
     );
   }
 }
-// const mapStateToProps = (state) => {
-//   return {
-//     dogs: state.dogs
-//   }
-// }
 
-// export default connect(mapStateToProps, {fetchDogs})(App);
-export default connect()(App);
+
+export default App;
+
