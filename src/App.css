@@ -1,5 +1,16 @@
+@font-face {
+    font-family: Fugaz;
+    src: url(assets/FugazOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: Rubik-Regular;
+    src: url(assets/Rubik-Regular.ttf);
+}
+
 body {
-    background-color: #eaf4f4;
+    background-color: #edf2f4;
+    font-family: Rubik-Regular;
 }
 
 .container {
@@ -9,7 +20,8 @@ body {
 
 }
  .jumbotron {
-     background-color: #f1faee;
+     font-family: 'Fugaz';
+    background-color: #edf2f4;
      color: #db3a34;
     background-image: url(./assets/shibu_inu.jpg);
     background-repeat: no-repeat;
@@ -25,9 +37,8 @@ body {
      box-shadow: 10px 10px 5px 0px rgba(59, 59, 59, 0.75);
  }
 
- /* .Shibu {
-     background-image: url(./assets/Shibu.jpg);
- } */
-
+h2 {
+    font-family: 'Fugaz';
+}
 
  
