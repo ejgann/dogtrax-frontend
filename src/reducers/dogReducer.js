@@ -19,6 +19,7 @@ function dogReducer(state = {dogs: []}, action) {
                     return dog
                 }
             })
+            return {...state, dogs: dogs}
             
         // utilizing original dogs array coming in at top from state
         // iterating through them, checking if id from dog from backend matches current dog id in iteration
@@ -35,7 +36,6 @@ function dogReducer(state = {dogs: []}, action) {
             // }
             // )
 
-            return {...state, dogs: dogs}
 
         default:
             return state
