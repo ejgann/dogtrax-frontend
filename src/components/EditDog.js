@@ -8,8 +8,9 @@ class EditDog extends React.Component {
         name: '',
         age: '',
         gender: '',
-        breed: '',
+        breed: '', 
         notes: ''
+        
     }
 
     handleChange = (event) => {
@@ -32,12 +33,12 @@ class EditDog extends React.Component {
     }
 
     
-    
     render() {
         return (
             <div>
                 <h4>Edit Dog's Information</h4>
-                <form onSubmit={this.handleSubmit}>
+                <form 
+                onSubmit={this.handleSubmit}>
                     <label>Dog's Name:</label> <input type='text' placeholder='Name' value={this.state.name} name='name' onChange={this.handleChange}/><br></br>
 
                     <label>Dog's Age:</label> <input type='text' placeholder='Age' value={this.state.age} name='age' onChange={this.handleChange}/><br></br>

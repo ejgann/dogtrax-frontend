@@ -1,5 +1,5 @@
 export const editDog = (data) => {
-debugger;
+// debugger;
     return (dispatch) => {
 
         fetch(`http://localhost:3000/api/v1/dogs/${data.id}`, {

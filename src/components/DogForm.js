@@ -24,6 +24,9 @@ class DogForm extends React.Component {
         event.preventDefault()
         this.props.addDog(this.state);
         // when someone submits a new dog form, we are sending the dog information contained in state (captured in the controlled form) to our action addDog
+
+        
+
         this.setState({
             name: '', age: '', gender: '', breed: '', notes: ''
         })

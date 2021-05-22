@@ -20,6 +20,8 @@ const Dog = (props) => {
                     Breed: <p> {dog ? dog.breed : null} </p>
                     Notes: <p> {dog ? dog.notes : null} </p>
                  <br></br>
+                 <button>Edit</button>
+                 <br></br>
                 <EditDog dog={dog}/>
                 <br></br>
                 <ReportsContainer dog={dog}/>
