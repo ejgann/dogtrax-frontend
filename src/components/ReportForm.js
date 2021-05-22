@@ -27,7 +27,7 @@ class ReportForm extends React.Component {
     
     render() {
         return (
-            <div>
+            <div className="form">
                 <Form onSubmit={this.handleSubmit}>
                     <Container>
                     <h4>Add a Report</h4>

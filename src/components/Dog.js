@@ -20,9 +20,11 @@ const Dog = (props) => {
                     Breed: <p> {dog ? dog.breed : null} </p>
                     Notes: <p> {dog ? dog.notes : null} </p>
                  <br></br>
+                <EditDog dog={dog}/>
+                <br></br>
                 <ReportsContainer dog={dog}/>
                 <br></br>
-                {/* <EditDog dog={dog} /> */}
+
         </div>
     )
 } 

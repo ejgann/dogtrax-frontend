@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {editDog} from '../actions/editDog';
 
 class EditDog extends React.Component {
+    
     state = {
         name: '',
         age: '',
@@ -29,6 +30,7 @@ class EditDog extends React.Component {
             notes: ''
         })
     }
+
     
     
     render() {

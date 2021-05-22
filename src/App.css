@@ -17,12 +17,12 @@ body {
     /* background-color: #eff6e0; */
     margin-top: 100px;
     margin-bottom: 100px;
-
 }
+
  .jumbotron {
-     font-family: 'Fugaz';
+    font-family: 'Fugaz';
     background-color: #edf2f4;
-     color: #db3a34;
+     color: #db5b34;
     background-image: url(./assets/shibu_inu.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -32,11 +32,20 @@ body {
      margin-top: 100px;
      margin-bottom: 100px;
      padding: 100px;
-     /* height: 20em; */
+     height: 15em;
 
-     box-shadow: 10px 10px 5px 0px rgba(59, 59, 59, 0.75);
- }
+     box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+ } 
 
-h1,h2, h3, h4 {
+h1, h2, h3, h4 {
     font-family: 'Fugaz';
+    color: #db5b34;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+.form {
+    border: 1px, solid, black;
 }

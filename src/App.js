@@ -11,12 +11,16 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <Container className="container">
-          <Jumbotron>
-            <h1>DogTrax</h1>
-            
-          </Jumbotron>
-          <DogsContainer />
+        {/* <Container className="container"> */}
+          <Container >
+            <Jumbotron>
+              <h1>DogTrax</h1>
+              
+            </Jumbotron>
+          </Container>
+
+          <Container>
+            <DogsContainer />
           </Container>
       </div>
     );
