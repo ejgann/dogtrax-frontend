@@ -1,18 +1,17 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {addDog} from '../actions/addDog';
+import {editDog} from '../actions/editDog';
 
-// will be a controlled form (i.e. state), which needs to be a class component
-class DogForm extends React.Component {
+class EditDog extends React.Component {
     
     state = {
-        name: '', age: '', gender: 'female', breed: '', notes: ''
+        name: '',
+        age: '',
+        gender: '',
+        breed: '', 
+        notes: ''
+        
     }
-
-
-    // have to add state (locally here, instead of in Redux store) so this form below is a controlled form
-    // if want to edit this info, makes sense to have redux store state instead
-
 
     handleChange = (event) => {
         this.setState({
@@ -22,23 +21,24 @@ class DogForm extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.addDog(this.state);
-        // when someone submits a new dog form, we are sending the dog information contained in state (captured in the controlled form) to our action addDog
-
-        
-
+        let dog = {...this.state, id: this.props.dog.id}
+        this.props.editDog(dog)
         this.setState({
-            name: '', age: '', gender: '', breed: '', notes: ''
+            name: '',
+            age: '',
+            gender: '',
+            breed: '',
+            notes: ''
         })
-        // sets state back to initial state after form is submitted
     }
 
     
     render() {
         return (
             <div>
-                <h3>Add a New Dog</h3>
-                <form onSubmit={this.handleSubmit}>
+                <h4>Edit Dog's Information</h4>
+                <form 
+                onSubmit={this.handleSubmit}>
                     <label>Dog's Name:</label> <input type='text' placeholder='Name' value={this.state.name} name='name' onChange={this.handleChange}/><br></br>
 
                     <label>Dog's Age:</label> <input type='text' placeholder='Age' value={this.state.age} name='age' onChange={this.handleChange}/><br></br>
@@ -61,6 +61,11 @@ class DogForm extends React.Component {
             </div>
         )
     }
+
+    // EditDog.defaultProps = {
+    //     dogs: {}
+    // }
+
 }
 
-export default connect(null, {addDog})(DogForm);
+export default connect(null, {editDog})(EditDog);
