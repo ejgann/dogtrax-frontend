@@ -7,8 +7,8 @@ class ReportsContainer extends React.Component {
     render() {
         return (
             <div>
-                <ReportForm dog={this.props.dog}/><br/>
                 <Reports reports={this.props.dog && this.props.dog.reports}/>
+                <ReportForm dog={this.props.dog}/><br/>
             </div>
         )
     }

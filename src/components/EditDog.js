@@ -10,8 +10,12 @@ class EditDog extends React.Component {
         age: '',
         gender: '',
         breed: '', 
-        notes: ''
-        
+        notes: '',
+        editDogInfo: false
+    }
+
+    toggleDogEdit = () => {
+        this.setState({editDogInfo: !this.state.editDogInfo});
     }
 
     handleChange = (event) => {
@@ -37,6 +41,9 @@ class EditDog extends React.Component {
     render() {
         return (
             <div>
+                <Button variant="secondary" size="sm" onClick={this.toggleDogEdit}>Edit Dog's Information</Button>
+                <br></br>
+                <br></br>
                 <Form>
                     <h4>Edit Dog's Information</h4>
                     <Form.Group controlId="editDogName">

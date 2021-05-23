@@ -14,19 +14,16 @@ const Dog = (props) => {
 
     return (
         <div>
-
                 <h2> {dog ? dog.name : null} </h2>
                     Age: <p> {dog ? dog.age : null} </p>
                     Gender: <p> {dog ? dog.gender : null} </p>
                     Breed: <p> {dog ? dog.breed : null} </p>
                     Notes: <p> {dog ? dog.notes : null} </p>
                  <br></br>
-                 <Button variant="secondary" size="sm">Edit Dog's Information</Button>
-                 <br></br>
-                 <br></br>
-                <EditDog dog={dog}/>
-                <br></br>
                 <ReportsContainer dog={dog}/>
+                <br></br>
+                 
+                <EditDog dog={dog}/>
                 <br></br>
 
         </div>
