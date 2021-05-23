@@ -9,7 +9,7 @@ const Dogs = (props) => {
 
     return (
         <div >
-            <h2>Dogs</h2>
+            <h2>Dog Clients</h2>
         {props.dogs.map(dog => 
             <CardDeck style={{width: '900', display: 'inline', flexDirection: 'row'}}>
                 <Card bg='light' key={dog.id} style={{margin: '10px', flex: 1, float: 'left'}}>
