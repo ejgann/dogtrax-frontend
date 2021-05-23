@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {editDog} from '../actions/editDog';
+import { Form, Container, FormGroup, FormControl, Button } from 'react-bootstrap';
 
 class EditDog extends React.Component {
     
@@ -36,35 +37,31 @@ class EditDog extends React.Component {
     render() {
         return (
             <div>
-                <h4>Edit Dog's Information</h4>
-                <form 
-                onSubmit={this.handleSubmit}>
-                    <label>Dog's Name:</label> <input type='text' placeholder='Name' value={this.state.name} name='name' onChange={this.handleChange}/><br></br>
+                <Form>
+                    <h4>Edit Dog's Information</h4>
+                    <Form.Group controlId="editDogName">
+                        <Form.Label>Dog's Name</Form.Label>
+                        <Form.Control type="input" />
+                    </Form.Group>
+                    <Form.Group controlId="editDogAge">
+                        <Form.Label>Dog's Age</Form.Label>
+                        <Form.Control type="input" />
+                    </Form.Group>
+                    <Form.Group controlId="editDogBreed">
+                        <Form.Label>Dog's Breed</Form.Label>
+                        <Form.Control type="input" placeholder="example:  Golden Retriever"/>
+                    </Form.Group>
+                    <Form.Group controlId="editDogNotes">
+                        <Form.Label>Notes</Form.Label>
+                        <Form.Control as="textarea" rows={3} placeholder="example:  Sparky is aggressive toward other dogs." />
+                    </Form.Group>
+                    <Button variant="primary">Update</Button>
+                </Form>
 
-                    <label>Dog's Age:</label> <input type='text' placeholder='Age' value={this.state.age} name='age' onChange={this.handleChange}/><br></br>
-
-                    <label>Dog's Gender:</label> <select value={this.state.gender} name='gender' onChange={this.handleChange}>
-                        <option value=''></option>
-                        <option value='female'>Female</option>
-                        <option value='male'>Male</option>
-                        </select><br></br>
-
-                    <label>Dog's Breed:</label> <input type='text' placeholder='Breed' value={this.state.breed} name='breed' onChange={this.handleChange} />
-                    <br></br>
-
-                    <label>Special Notes:</label> <textarea placeholder='Notes' value={this.state.notes} name='notes' onChange={this.handleChange}></textarea>
-
-                    <br></br>
-
-                    <input type="submit"/><br></br>
-                </form>
             </div>
         )
     }
 
-    // EditDog.defaultProps = {
-    //     dogs: {}
-    // }
 
 }
 

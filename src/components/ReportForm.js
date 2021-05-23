@@ -7,7 +7,10 @@ import { addReport } from '../actions/addReport';
 class ReportForm extends React.Component {
 
     state = {
-        date: '', pee: '', poop: '', comments: ''
+        date: '', 
+        pee: '', 
+        poop: '', 
+        comments: ''
     }
 
     
@@ -69,7 +72,8 @@ class ReportForm extends React.Component {
                 </Col>
                 </Row>
                 <Form.Group controlId="formReportComments">
-                    <Form.Label>Anything to know about this dog?</Form.Label>
+                    <Form.Label>Notes from our walk
+                    </Form.Label>
                 <Form.Control 
                     placeholder="Comments"
                     name='comments'
