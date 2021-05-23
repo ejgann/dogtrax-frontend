@@ -1,5 +1,6 @@
 import React from 'react'
 import {Redirect} from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 import ReportsContainer from '../containers/ReportsContainer';
 import EditDog from './EditDog';
 
@@ -20,7 +21,8 @@ const Dog = (props) => {
                     Breed: <p> {dog ? dog.breed : null} </p>
                     Notes: <p> {dog ? dog.notes : null} </p>
                  <br></br>
-                 <button>Edit</button>
+                 <Button variant="secondary" size="sm">Edit Dog's Information</Button>
+                 <br></br>
                  <br></br>
                 <EditDog dog={dog}/>
                 <br></br>
