@@ -8,6 +8,52 @@
     src: url(assets/Rubik-Regular.ttf);
 }
 
+:root{
+    --sidebar-flex:1.5;
+    --condiv-flex:6;
+    --fontsize-p:1.2rem;
+    --fontsize-nav:1.6rem;
+    --typing-font:3rem;
+}
+
+* {
+    margin:0;
+    padding:0;
+}
+
+.App {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.condiv {
+    padding: 100px;
+    flex:var(--condiv-flex);
+}
+
+nav {
+    padding: 60px 30px 0px 30px;
+    flex:var(--sidebar-flex);
+    background:violet;
+}
+
+nav ul {
+    font-size: var(--font-nav);
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+    color: white !important;
+}
+
+nav ul li {
+    margin: 40px;
+}
+
+.active {
+    font-weight: bolder;
+}
+
 body {
     background-color: #edf2f4;
     font-family: Rubik-Regular;
