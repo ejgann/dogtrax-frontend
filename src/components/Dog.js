@@ -1,8 +1,9 @@
 import React from 'react'
 import {Redirect} from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-import ReportsContainer from '../containers/ReportsContainer';
-import EditDog from './EditDog';
+// import ReportsContainer from '../containers/ReportsContainer';
+// import EditDog from './EditDog';
+import DogCard from './DogCard';
 
 
 const Dog = (props) => {
@@ -14,7 +15,8 @@ const Dog = (props) => {
 
     return (
         <div>
-                <h2> {dog ? dog.name : null} </h2>
+            <DogCard />
+                {/* <h2> {dog ? dog.name : null} </h2>
                     Age: <p> {dog ? dog.age : null} </p>
                     Gender: <p> {dog ? dog.gender : null} </p>
                     Breed: <p> {dog ? dog.breed : null} </p>
@@ -24,7 +26,7 @@ const Dog = (props) => {
                 <br></br>
                  
                 <EditDog dog={dog}/>
-                <br></br>
+                <br></br> */}
 
         </div>
     )

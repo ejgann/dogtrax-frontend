@@ -1,6 +1,7 @@
 import React from 'react';
 import {Route, Link} from 'react-router-dom';
 import {CardDeck, Card, Image} from 'react-bootstrap';
+
 import Dog from './Dog';
 // functional component since only going to render a list of dogs
 
