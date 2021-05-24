@@ -20,10 +20,10 @@ class NavItem extends React.Component {
         <nav>
           <ul>
             <li>
-              <Link to={`/`}>Home</Link>
+              <Link to={`/`} className="custom-link">Home</Link>
             </li>
             <li>
-            <Link to={`/dogs`}>All Dogs</Link>
+            <Link to={`/dogs`} className="custom-link">All Dogs</Link>
 
               {/* <button onClick={this.handleClick} value="dogs" Link to={`/dogs`}></Link>
                 Dogs
