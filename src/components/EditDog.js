@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {editDog} from '../actions/editDog';
 import { Form, Button } from 'react-bootstrap';
-import Dog from './Dog';
 
 class EditDog extends React.Component {
     
