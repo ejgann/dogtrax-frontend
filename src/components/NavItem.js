@@ -1,21 +1,39 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-class Navitem extends Component {
-    constructor(props) {
-        super(props);
-        this.props.item.active = this.props.item.bind(this)
+class NavItem extends React.Component {
+  
+    state = {
+        target: 'home'
+    };
+
+    handleClick(event) {
+        this.setState({
+            target: event.target.value
+        });
     }
-
+  
+  
     render() {
-        return (
-            <li id={this.props.item}>
-                <Link to={this.props.tolink} onClick={this.props.active.bind(this, this.props.item)}>
-                    {this.props.item}
-                </Link>
+    return (
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <button onClick={this.handleClick} value="home">
+                Home
+              </button>
             </li>
-        )
-    }
+            <li>
+              <button onClick={this.handleClick} value="dogs">
+                Dogs
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    );
+  }
 }
 
-export default Navitem;
+export default NavItem;
