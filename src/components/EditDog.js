@@ -53,6 +53,10 @@ class EditDog extends React.Component {
                         <Form.Label>Dog's Age</Form.Label>
                         <Form.Control name="age" type="input" defaultValue={this.state.age} onChange={this.handleChange} />
                     </Form.Group>
+                    <Form.Group controlId="editDogGender">
+                        <Form.Label>Dog's Gender</Form.Label>
+                        <Form.Control name="gender" type="input" defaultValue={this.state.gender} onChange={this.handleChange} />
+                    </Form.Group>
                     <Form.Group controlId="editDogBreed">
                         <Form.Label>Dog's Breed</Form.Label>
                         <Form.Control name="breed" type="input" defaultValue={this.state.breed} onChange={this.handleChange} placeholder="example:  Golden Retriever"/>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import {Route, Link} from 'react-router-dom';
 
 class NavItem extends React.Component {
   
@@ -20,14 +20,14 @@ class NavItem extends React.Component {
         <nav>
           <ul>
             <li>
-              <button onClick={this.handleClick} value="home">
-                Home
-              </button>
+              <Link to={`/`}>Home</Link>
             </li>
             <li>
-              <button onClick={this.handleClick} value="dogs">
+            <Link to={`/dogs`}>All Dogs</Link>
+
+              {/* <button onClick={this.handleClick} value="dogs" Link to={`/dogs`}></Link>
                 Dogs
-              </button>
+              </button> */}
             </li>
           </ul>
         </nav>
