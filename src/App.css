@@ -8,6 +8,32 @@
     src: url(assets/Rubik-Regular.ttf);
 }
 
+nav {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+nav ul li button {
+    border: 0;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 100%;
+    cursor: pointer;
+}
+
+nav ul li button:hover {
+    color: #fe4f36;
+}
+
 body {
     background-color: #edf2f4;
     font-family: Rubik-Regular;
@@ -15,7 +41,7 @@ body {
 
 .container {
     /* background-color: #eff6e0; */
-    margin-top: 100px;
+    margin-top: 25px;
     margin-bottom: 100px;
 }
 
@@ -29,7 +55,7 @@ body {
      background-position: top;
      background-size: contain;
      padding-top: 50px;
-     margin-top: 100px;
+     margin-top: 50px;
      margin-bottom: 100px;
      padding: 100px;
      height: 15em;
