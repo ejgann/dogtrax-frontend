@@ -9,9 +9,10 @@
 }
 
 nav {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 50px;
+    max-width: 100%;
+    /* margin: 0 0 10px 0; */
+    padding: 15px;
+    background-color: lightyellow;
 }
 
 nav ul {
@@ -34,9 +35,24 @@ nav ul li .custom-link:hover {
     color: #fe4f36;
 }
 
-body {
-    background-color: #edf2f4;
-    font-family: Rubik-Regular;
+#homeContainer {
+    display: block;
+}
+
+.banner {
+    background-image: url("assets/pitt.jpg");
+    
+    height: 80vh;
+    background-size: cover;
+    box-shadow: 0 10px 10px lightgrey;
+    display: block;
+    text-align: left;
+    position: relative;
+}
+
+.banner h1 {
+    padding: 80px;
+    color: darkslateblue;
 }
 
 .container {
@@ -45,7 +61,7 @@ body {
     margin-bottom: 100px;
 }
 
- .jumbotron {
+ /* .jumbotron {
     font-family: 'Fugaz';
     background-color: #edf2f4;
      color: #fe4f36;
@@ -61,11 +77,11 @@ body {
      height: 15em;
 
      box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
- } 
+ }  */
 
 h1, h2, h3, h4 {
     font-family: 'Fugaz';
-    color: #fe4f36;
+    color: darkslateblue;
 }
 
 h1 {

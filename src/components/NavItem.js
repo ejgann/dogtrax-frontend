@@ -23,7 +23,7 @@ class NavItem extends React.Component {
               <Link to={`/`} className="custom-link">Home</Link>
             </li>
             <li>
-            <Link to={`/dogs`} className="custom-link">All Dogs</Link>
+            <Link to={`/dogs`} className="custom-link">Dog Clients</Link>
 
               {/* <button onClick={this.handleClick} value="dogs" Link to={`/dogs`}></Link>
                 Dogs

@@ -4,7 +4,7 @@ import { Container, Jumbotron} from 'react-bootstrap';
 import DogsContainer from './containers/DogsContainer'
 import ReportsContainer from './containers/ReportsContainer'
 import './App.css';
-import NavBar from './components/NavBar'
+import Homepage from './components/Homepage'
 
 
 class App extends React.Component {
@@ -12,17 +12,22 @@ class App extends React.Component {
 
     return (
       <Router>
-        <div className="App">
-          <NavBar />
+        <div>
+            {/* <NavBar /> */}
+            <Homepage />
+            <br></br>
           <Container >
+            <DogsContainer />
+          </Container>
+          {/* <Container >
             <Jumbotron>
               <h1>DogTrax</h1>
             </Jumbotron>
-          </Container>
+          </Container> */}
 
-          <Container>
-            <DogsContainer />
-          </Container>
+          {/* <Container>
+            
+          </Container> */}
         </div>
       </Router>
     );
