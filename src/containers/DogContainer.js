@@ -25,9 +25,6 @@ class DogContainer extends React.Component {
       (dog) => dog.id == this.props.match.params.id
     )[0];
 
-    
-
-    console.log(dog);
 
     return (
       <div>

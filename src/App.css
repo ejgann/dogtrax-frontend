@@ -25,7 +25,7 @@ nav ul {
 
 nav ul li .custom-link {
     border: 0;
-    
+    color: white;
     text-transform: uppercase;
     font-size: 100%;
     cursor: pointer;
@@ -40,8 +40,8 @@ nav ul li .custom-link:hover {
 } */
 
 .banner {
-    background-image: url("assets/lab\ 2.jpg");
-    
+    background-image: url("assets/dogOnLeash.jpg");
+    opacity: 0.8;
     height: 100vh;
     background-size: cover;
     box-shadow: 0 10px 10px lightgrey;
@@ -53,7 +53,7 @@ nav ul li .custom-link:hover {
 .banner h1 {
     padding: 80px;
     color: #fe4f36;
-    opacity: 0.8;
+    /* opacity: 0.8; */
     font-size: 100px;
 }
 
