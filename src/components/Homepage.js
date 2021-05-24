@@ -1,11 +1,11 @@
 import React from 'react';
+import NavBar from './NavBar'
 
 const Homepage = () => {
 
     return (
         <div id="homeContainer" className="banner">
-            {/* <CircleButton /> */}
-            {/* <NavBar /> */}
+            <NavBar />
             <h1>DogTrax</h1>
         </div>
     )

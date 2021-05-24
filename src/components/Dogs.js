@@ -12,9 +12,9 @@ const Dogs = (props) => {
         >
           <Card
             bg="light"
-            key={dog.id}
             style={{ margin: "10px", flex: 1, float: "left" }}
-          >
+            key={dog.id}
+            >
             {/* <Card.Header>{dog.name}</Card.Header> */}
             <Card.Body>
               <Card.Text>
