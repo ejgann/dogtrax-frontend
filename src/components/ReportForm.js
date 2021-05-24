@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux';
-import { Form, Container, FormGroup, FormControl, Row, Col, Button } from 'react-bootstrap';
+import { Form, Container, Row, Col, Button } from 'react-bootstrap';
 import { addReport } from '../actions/addReport';
 
 

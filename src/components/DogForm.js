@@ -3,9 +3,6 @@ import { connect } from "react-redux";
 import { addDog } from "../actions/addDog";
 import {
   Form,
-  Container,
-  FormGroup,
-  FormControl,
   Button
 } from "react-bootstrap";
 

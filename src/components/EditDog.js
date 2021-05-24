@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {editDog} from '../actions/editDog';
-import { Form, Container, FormGroup, FormControl, Button } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
 
 class EditDog extends React.Component {
     

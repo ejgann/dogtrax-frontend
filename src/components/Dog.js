@@ -1,9 +1,4 @@
 import React from 'react'
-import {Redirect} from 'react-router-dom';
-import { Button } from 'react-bootstrap';
-import ReportsContainer from '../containers/ReportsContainer';
-import EditDog from './EditDog';
-
 
 const Dog = (props) => {
 

@@ -1,10 +1,10 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import { Container, Jumbotron} from 'react-bootstrap';
+import {BrowserRouter as Router} from 'react-router-dom';
+import { Container} from 'react-bootstrap';
 import DogsContainer from './containers/DogsContainer'
-import ReportsContainer from './containers/ReportsContainer'
 import './App.css';
 import Homepage from './components/Homepage'
+import NavBar from './components/NavBar'
 
 
 class App extends React.Component {
@@ -13,8 +13,8 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-            {/* <NavBar /> */}
             <Homepage />
+            <NavBar />
             <br></br>
           <Container >
             <DogsContainer />

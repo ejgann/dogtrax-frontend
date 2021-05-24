@@ -12,7 +12,7 @@ nav {
     max-width: 100%;
     /* margin: 0 0 10px 0; */
     padding: 15px;
-    background-color: lightyellow;
+    background-color: #e0e1dd;
 }
 
 nav ul {
@@ -35,14 +35,14 @@ nav ul li .custom-link:hover {
     color: #fe4f36;
 }
 
-#homeContainer {
+/* body {
     display: block;
-}
+} */
 
 .banner {
-    background-image: url("assets/pitt.jpg");
+    background-image: url("assets/lab\ 2.jpg");
     
-    height: 80vh;
+    height: 70vh;
     background-size: cover;
     box-shadow: 0 10px 10px lightgrey;
     display: block;
@@ -52,7 +52,9 @@ nav ul li .custom-link:hover {
 
 .banner h1 {
     padding: 80px;
-    color: darkslateblue;
+    color: #fe4f36;
+    opacity: 0.8;
+    font-size: 100px;
 }
 
 .container {
@@ -81,10 +83,40 @@ nav ul li .custom-link:hover {
 
 h1, h2, h3, h4 {
     font-family: 'Fugaz';
-    color: darkslateblue;
+    color: #fe4f36;
 }
 
-h1 {
-    font-size: 100px;
+.round-button {
+    width: 25%;
 }
 
+.round-button-circle {
+    width:  100%;
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    border: 10px solid red;
+    overflow: hidden;
+    background: green;
+    box-shadow: 0 10px 10px lightgrey;
+}
+
+.round-button-circle:hover {
+    background: black;
+}
+
+.round-button a {
+    display: block;
+    float: left;
+    width: 100%;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    line-height: 1em;
+    margin-top: -0.5em;
+    text-align: center;
+    color: yellow;
+    font-family: "Fugaz";
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+}
