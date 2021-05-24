@@ -1,10 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addDog } from "../actions/addDog";
-import {
-  Form,
-  Button
-} from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 
 // will be a controlled form (i.e. state), which needs to be a class component
 class DogForm extends React.Component {
@@ -28,16 +25,14 @@ class DogForm extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.addDog(this.state);
-    // when someone submits a new dog form, we are sending the dog information contained in state (captured in the controlled form) to our action addDog
 
     this.setState({
       name: "",
       age: "",
       gender: "",
       breed: "",
-      notes: ""
-    })
-    // sets state back to initial state after form is submitted
+      notes: "",
+    });
   };
 
   render() {
@@ -76,7 +71,9 @@ class DogForm extends React.Component {
               placeholder="example:  Sparky is aggressive toward other dogs."
             />
           </Form.Group>
-          <Button type="submit" variant="primary">Update</Button>
+          <Button type="submit" variant="primary" onSubmit={this.handleSubmit}>
+            Submit
+          </Button>
         </Form>
       </div>
     );
