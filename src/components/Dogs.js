@@ -7,7 +7,8 @@ const Dogs = (props) => {
     <div>
       <h2>Dog Clients</h2>
       {props.dogs.map((dog) => (
-        <li> <Link key={dog.id} to={`/dogs/${dog.id}`}>{dog.name}</Link>
+        <li key={dog.id}> 
+          <Link to={`/dogs/${dog.id}`}>{dog.name}</Link>
         </li>
 
         // <CardDeck

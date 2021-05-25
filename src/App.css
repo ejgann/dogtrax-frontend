@@ -35,10 +35,6 @@ nav ul li .custom-link:hover {
     color: #72ddf7;
 }
 
-/* body {
-    display: block;
-} */
-
 .banner {
     background-image: url("assets/dogOnLeash.jpg");
     opacity: 0.8;

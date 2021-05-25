@@ -23,7 +23,7 @@ class NavItem extends React.Component {
               </Link>
             </li>
             <li>
-              <Link to={`/dogs`} className="custom-link">
+              <Link to={`/dogs/#dogClients`} className="custom-link">
                 Dog Clients
               </Link>
             </li>

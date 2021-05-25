@@ -16,7 +16,7 @@ class App extends React.Component {
             {/* <NavBar /> */}
             <Homepage />
             <br></br>
-          <Container >
+          <Container>
             <DogsContainer />
           </Container>
           {/* <Container >
