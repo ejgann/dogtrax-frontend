@@ -36,7 +36,8 @@ nav ul li .custom-link:hover {
 }
 
 .banner {
-    background-image: url("assets/dogOnLeash.jpg");
+    background-image: url("assets/dachshund.jpg");
+    
     opacity: 0.8;
     height: 100vh;
     background-size: cover;
@@ -47,20 +48,26 @@ nav ul li .custom-link:hover {
 }
 
 .banner h1 {
+    text-align: center;
+    margin: -70px;
+    /* margin-left: 200px; */
     padding: 80px;
-    color: #fc2f00;
+    color: #e21c70;
     /* opacity: 0.8; */
     font-size: 100px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .banner h3 {
+    text-align: center;
     padding: 10px;
-    margin-top: -90px;
-    margin-left: 140px;
-    color: #fc2f00;
+    margin-top: -95px;
+    margin-left: 400px;
+    color: #717ec3;
     /* opacity: 0.8; */
     font-family: "Rubik-Regular";
     font-size: 30px;
+    
 }
 
 .customCard {
@@ -103,5 +110,6 @@ nav ul li .custom-link:hover {
 
 h1, h2, h3, h4 {
     font-family: 'Fugaz';
-    color: #fe4f36;
+    color: #717ec3;
+    text-shadow: 2px 2px 4px #b8b4b4;
 }
