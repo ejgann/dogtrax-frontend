@@ -24,7 +24,7 @@ class ReportForm extends React.Component {
       date: "",
       pee: "",
       poop: "",
-      comments: ""
+      comments: "",
     });
   };
 
@@ -48,9 +48,13 @@ class ReportForm extends React.Component {
               <Col>
                 <Form.Group controlId="formReportPee">
                   <Form.Label>Did Dog Pee?</Form.Label>
-                  <Form.Control as="select" size="sm"
+                  <Form.Control
+                    as="select"
+                    size="sm"
                     value={this.state.pee}
-                    name='pee' onChange={this.handleChange}>
+                    name="pee"
+                    onChange={this.handleChange}
+                  >
                     <option>Yes</option>
                     <option>No</option>
                   </Form.Control>

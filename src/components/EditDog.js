@@ -64,6 +64,7 @@ class EditDog extends React.Component {
             <Form.Label>Dog's Gender</Form.Label>
             <Form.Control
               name="gender"
+              defaultValue={this.state.gender}
               as="select"
               onChange={this.handleChange}
             >

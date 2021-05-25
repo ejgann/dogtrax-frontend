@@ -1,27 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { CardDeck, Card } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 
 const Dogs = (props) => {
   return (
     <div>
       <h2>Dog Clients</h2>
       {props.dogs.map((dog) => (
-        <li key={dog.id}> 
-          <Link to={`/dogs/${dog.id}`}>{dog.name}</Link>
-        </li>
+        <Container className="cardContainer">
+        <Card key={dog.id} className="customCard">
+          <Link to={`/dogs/${dog.id}`}>{dog.name}</Link></Card>
+          </Container>
+        // <li key={dog.id}> 
+        //   <Link to={`/dogs/${dog.id}`}>{dog.name}</Link>
+        // </li>
 
-        // <CardDeck
-        //   style={{ width: "900", display: "inline", flexDirection: "row" }}>
-        //   <Card >
-            
-        //     <Card.Body>
-        //       <Card.Text >
-        //           <Link key={dog.id} to={`/dogs/${dog.id}`}>{dog.name}</Link>{" "}
-        //       </Card.Text>
-        //     </Card.Body>
-        //   </Card>
-        // </CardDeck>
+        
       ))}
     </div>
 

@@ -40,7 +40,7 @@ nav ul li .custom-link:hover {
     opacity: 0.8;
     height: 100vh;
     background-size: cover;
-    box-shadow: 0 10px 10px lightgrey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: block;
     text-align: left;
     position: relative;
@@ -53,10 +53,34 @@ nav ul li .custom-link:hover {
     font-size: 100px;
 }
 
-.container {
-    /* background-color: #eff6e0; */
-    margin-top: 25px;
-    margin-bottom: 100px;
+.banner h3 {
+    padding: 10px;
+    margin-top: -90px;
+    margin-left: 140px;
+    color: #fc2f00;
+    /* opacity: 0.8; */
+    font-family: "Rubik-Regular";
+    font-size: 30px;
+}
+
+.customCard {
+    background-color: #e7ecef;
+    height: 150px;
+    width: 150px;
+    /* float: left; */
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.customCard:hover {
+    background-color: #a3cef1;
+}
+
+.cardContainer {
+    width: 180px;
+    float: left;
+    padding: 10px;
 }
 
  /* .jumbotron {
@@ -80,39 +104,4 @@ nav ul li .custom-link:hover {
 h1, h2, h3, h4 {
     font-family: 'Fugaz';
     color: #fe4f36;
-}
-
-.round-button {
-    width: 25%;
-}
-
-.round-button-circle {
-    width:  100%;
-    height: 0;
-    padding-bottom: 100%;
-    border-radius: 50%;
-    border: 10px solid red;
-    overflow: hidden;
-    background: green;
-    box-shadow: 0 10px 10px lightgrey;
-}
-
-.round-button-circle:hover {
-    background: black;
-}
-
-.round-button a {
-    display: block;
-    float: left;
-    width: 100%;
-    padding-top: 50%;
-    padding-bottom: 50%;
-    line-height: 1em;
-    margin-top: -0.5em;
-    text-align: center;
-    color: yellow;
-    font-family: "Fugaz";
-    font-size: 1.2em;
-    font-weight: bold;
-    text-decoration: none;
 }
