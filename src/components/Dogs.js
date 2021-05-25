@@ -7,22 +7,20 @@ const Dogs = (props) => {
     <div>
       <h2>Dog Clients</h2>
       {props.dogs.map((dog) => (
-        <CardDeck
-          style={{ width: "900", display: "inline", flexDirection: "row" }}
-        >
-          <Card
-            bg="light"
-            style={{ margin: "10px", flex: 1, float: "left" }}
-            key={dog.id}
-            >
-            {/* <Card.Header>{dog.name}</Card.Header> */}
-            <Card.Body>
-              <Card.Text>
-                  <Link to={`/dogs/${dog.id}`}>{dog.name}</Link>{" "}
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </CardDeck>
+        <li> <Link key={dog.id} to={`/dogs/${dog.id}`}>{dog.name}</Link>
+        </li>
+
+        // <CardDeck
+        //   style={{ width: "900", display: "inline", flexDirection: "row" }}>
+        //   <Card >
+            
+        //     <Card.Body>
+        //       <Card.Text >
+        //           <Link key={dog.id} to={`/dogs/${dog.id}`}>{dog.name}</Link>{" "}
+        //       </Card.Text>
+        //     </Card.Body>
+        //   </Card>
+        // </CardDeck>
       ))}
     </div>
 
