@@ -32,7 +32,7 @@ nav ul li .custom-link {
 }
 
 nav ul li .custom-link:hover {
-    color: #72ddf7;
+    color: #717ec3;
 }
 
 .banner {
@@ -71,7 +71,7 @@ nav ul li .custom-link:hover {
 }
 
 .customCard {
-    background-color: #e7ecef;
+    background-color: white;
     height: 150px;
     width: 150px;
     /* float: left; */

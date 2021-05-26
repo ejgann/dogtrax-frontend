@@ -1,4 +1,5 @@
 import React from "react";
+import { Table } from "react-bootstrap";
 
 const Reports = (props) => {
   return (
@@ -7,10 +8,27 @@ const Reports = (props) => {
       <h3>Reports</h3>
       {props.reports &&
         props.reports.map((report) => (
-          <li key={report.id}>
-            {report.date} - {report.pee === true ? "Yes" : "No"} -{" "}
-            {report.poop === true ? "Yes" : "No"} - {report.comments}
-          </li>
+          <Table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Pee?</th>
+                <th>Poop?</th>
+                <th>Comments</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr key={report.id}>
+                {/* <td>{new Intl.DateTimeFormat("en-US", {
+                  year: "numeric", month: "long", day: "2-digit"}).format({report.date})}</td> */}
+                <td>{report.date}</td>
+                <td>{report.pee === true ? "Yes" : "No"}</td>
+                <td>{report.poop === true ? "Yes" : "No"}</td>
+                <td>{report.comments}</td>
+              </tr>
+            </tbody>
+          </Table>
         ))}
     </div>
   );
