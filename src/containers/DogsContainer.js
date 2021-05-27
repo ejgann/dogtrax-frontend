@@ -1,6 +1,3 @@
-// container should render other components, pass them any necessary data
-// typically class components since often need to have state, lifecycle methods, etc, which are only available in class components
-
 import React from "react";
 import { connect } from "react-redux";
 import { Route, Switch } from "react-router-dom";
