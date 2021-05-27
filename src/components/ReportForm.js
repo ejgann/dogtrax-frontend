@@ -11,10 +11,6 @@ class ReportForm extends React.Component {
     comments: "",
   };
 
-  toggleReportForm = () => {
-    this.setState({ newReportInfo: !this.state.newReportInfo });
-  }
-
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
