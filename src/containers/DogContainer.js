@@ -33,10 +33,10 @@ class DogContainer extends React.Component {
         <Button type="submit" variant="outline-primary" onClick={this.toggleAddReport}>Add a Report</Button>
 
         { this.state.isEditFormVisible ? (
-        <EditDog dog={dog} />) : null }
+        <EditDog dog={dog} toggleEdit={this.toggleEdit} />) : null }
 
         { this.state.isAddReportFormVisible ? (
-          <ReportForm dog={dog}  />) : null }
+          <ReportForm dog={dog} toggleAddReport={this.toggleAddReport}  />) : null }
         
         <br></br>
         <br></br>

@@ -11,6 +11,10 @@ class ReportForm extends React.Component {
     comments: "",
   };
 
+  toggleReportForm = () => {
+    this.setState({ newReportInfo: !this.state.newReportInfo });
+  }
+
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
@@ -20,12 +24,13 @@ class ReportForm extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.addReport(this.state, this.props.dog.id);
-    this.setState({
-      date: "",
-      pee: "",
-      poop: "",
-      comments: "",
-    });
+    this.props.toggleAddReport();
+    // this.setState({
+    //   date: "",
+    //   pee: "",
+    //   poop: "",
+    //   comments: "",
+    // });
   };
 
   render() {

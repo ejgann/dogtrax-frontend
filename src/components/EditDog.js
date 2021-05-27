@@ -12,9 +12,6 @@ class EditDog extends React.Component {
     notes: this.props.dog.notes,
   };
 
-  toggleDogEdit = () => {
-    this.setState({ editDogInfo: !this.state.editDogInfo });
-  };
 
   handleChange = (event) => {
     this.setState({
@@ -26,13 +23,7 @@ class EditDog extends React.Component {
     event.preventDefault();
     let dog = { ...this.state, id: this.props.dog.id };
     this.props.editDog(dog);
-    this.setState({
-      name: "",
-      age: "",
-      gender: "",
-      breed: "",
-      notes: "",
-    });
+    this.props.toggleEdit();
   };
 
   render() {
