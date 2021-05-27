@@ -35,6 +35,17 @@ function dogReducer(state = { dogs: [] }, action) {
         }
       });
       return { ...state, dogs: updatedDogs };
+    
+    case "SORT_DOGS":
+      let sortedDogs = [];
+      if (action.payload === "age") {
+         sortedDogs = [...state.dogs].sort((a, b) => a.age - b.age);
+      } else if (action.payload === "name") {
+        sortedDogs = [...state.dogs].sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()))
+      }
+      return { ...state, dogs: sortedDogs }
+
+
 
     default:
       return state;
