@@ -25,7 +25,6 @@ class DogContainer extends React.Component {
     let dog = this.props.dogs.filter(
       (dog) => dog.id == this.props.match.params.id
       )[0];
-      console.log(this.props.dogs)
 
     return (
       <div>

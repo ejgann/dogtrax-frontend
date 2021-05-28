@@ -7,13 +7,40 @@ import DogContainer from "./DogContainer";
 import DogForm from "../components/DogForm";
 
 class DogsContainer extends React.Component {
+  
   componentDidMount() {
     this.props.fetchDogs();
   }
 
+// search stuff
+state = {   
+  query: ''
+};
+
+handleChange = (event) => {
+  this.setState({query: event.target.value})
+};
+dynamicSearch = () => {
+  return this.props.dogs.filter(dog => dog.name.toLowerCase().includes(this.state.query.toLowerCase()))
+}
+
+
+// end search stuff
+
+
+
   render() {
+
     return (
       <div>
+{/* search stuff */}
+        <h2>Search Among Dogs</h2>
+          <input type="text" value={this.state.query} placeholder="Search..." 
+              onChange={this.handleChange} />
+            <p>Search Results:</p>
+            <Dogs dogs = {this.dynamicSearch()} />
+{/* end search stuff */}
+
         <Switch>
           <Route path="/dogs/new" component={DogForm} />
           <Route
