@@ -22,7 +22,9 @@ class EditDog extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     let dog = { ...this.state, id: this.props.dog.id };
+    console.log('a')
     this.props.editDog(dog);
+    console.log('f')
     this.props.toggleEdit();
   };
 
