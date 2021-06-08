@@ -5,23 +5,24 @@ import { fetchDogs } from "../actions/fetchDogs";
 import Dogs from "../components/Dogs";
 import DogContainer from "./DogContainer";
 import DogForm from "../components/DogForm";
-import { Form, FormControl, Button } from 'react-bootstrap';
+import Search from "../components/Search";
+// import { Form, FormControl, Button } from 'react-bootstrap';
 
 class DogsContainer extends React.Component {
   
-  state = {
-    query: ''
-  }
+  // state = {
+  //   query: ''
+  // }
 
-  handleChange = (event) => {
-    this.setState({query: event.target.value})
-  }
+  // handleChange = (event) => {
+  //   this.setState({query: event.target.value})
+  // }
 
-  dynamicSearch = () => {
-    return this.props.dogs.filter(dog => {
-      return dog.name.toLowerCase().includes(this.state.query.toLowerCase())
-    })
-  }
+  // dynamicSearch = () => {
+  //   return this.props.dogs.filter(dog => {
+  //     return dog.name.toLowerCase().includes(this.state.query.toLowerCase())
+  //   })
+  // }
   
   componentDidMount() {
     this.props.fetchDogs();
@@ -30,11 +31,12 @@ class DogsContainer extends React.Component {
   render() {
     return (
       <div>
-        <Form inline>
+        <Search />
+        {/* <Form inline>
           <FormControl type="text" value={this.state.query} placeholder="Search for a Dog..." className="mr-sm-2" onChange={this.handleChange} />
           <Button variant="outline-primary">Search</Button>
         </Form>
-        <br></br>
+        <br></br> */}
 
         <Switch>
           <Route path="/dogs/new" component={DogForm} />
@@ -47,7 +49,7 @@ class DogsContainer extends React.Component {
           <Route
             path="/dogs"
             render={(routerProps) => (
-              <Dogs {...routerProps} dogs={this.dynamicSearch()} />
+              <Dogs {...routerProps} dogs={this.props.dogs} />
             )}
           />
         </Switch>
