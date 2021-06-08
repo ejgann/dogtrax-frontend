@@ -11,9 +11,10 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-          <Homepage />
           <br></br>
           <Container>
+            <Homepage />
+            <br></br>
             <DogsContainer />
           </Container>
         </div>
