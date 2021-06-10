@@ -5,24 +5,24 @@ import { fetchDogs } from "../actions/fetchDogs";
 import Dogs from "../components/Dogs";
 import DogContainer from "./DogContainer";
 import DogForm from "../components/DogForm";
-import Search from "../components/Search";
-// import { Form, FormControl, Button } from 'react-bootstrap';
+import { Form, FormControl, Button } from 'react-bootstrap';
+
 
 class DogsContainer extends React.Component {
   
-  // state = {
-  //   query: ''
-  // }
+  state = {
+    query: ''
+  }
 
-  // handleChange = (event) => {
-  //   this.setState({query: event.target.value})
-  // }
+  handleChange = (event) => {
+    this.setState({query: event.target.value})
+  }
 
-  // dynamicSearch = () => {
-  //   return this.props.dogs.filter(dog => {
-  //     return dog.name.toLowerCase().includes(this.state.query.toLowerCase())
-  //   })
-  // }
+  dynamicSearch = () => {
+    return this.props.dogs.filter(dog => {
+      return dog.name.toLowerCase().includes(this.state.query.toLowerCase())
+    })
+  }
   
   componentDidMount() {
     this.props.fetchDogs();
@@ -31,12 +31,11 @@ class DogsContainer extends React.Component {
   render() {
     return (
       <div>
-        <Search />
-        {/* <Form inline>
+        <Form inline>
           <FormControl type="text" value={this.state.query} placeholder="Search for a Dog..." className="mr-sm-2" onChange={this.handleChange} />
           <Button variant="outline-primary">Search</Button>
         </Form>
-        <br></br> */}
+        <br></br>
 
         <Switch>
           <Route path="/dogs/new" component={DogForm} />
@@ -49,7 +48,7 @@ class DogsContainer extends React.Component {
           <Route
             path="/dogs"
             render={(routerProps) => (
-              <Dogs {...routerProps} dogs={this.props.dogs} />
+              <Dogs {...routerProps} dogs={this.dynamicSearch()} />
             )}
           />
         </Switch>
@@ -67,5 +66,3 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps, { fetchDogs })(DogsContainer);
 // since the goal is to show a list of dogs, we want to map State to props
 // React doesn't expect/need mapStateToProps to function. It simply takes the first argument for connect() and knows that that means we want to connect to the Redux store and map whatever is brought in from props. The specifics are outlined in the mapStateToProps function above
-
-// including {fetchDogs} inside connect arguments is equivalent to mapDispatchToProps

@@ -1,37 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react';
+import { Form, FormControl, Button } from 'react-bootstrap';
 
-function Search(props) {
-    const [query, setQuery] = useState('');
-    const [results, setResults] = useState([]);
-    const handleChange = event => {
-        setQuery(event.target.value);
-    };
-    const dogs = props.dogs;
-
-    function dynamicSearch(dog) {
-        const results = dogs.filter(dog => dog.name.toLowerCase().includes(query.toLowerCase())
-        );
-        return results;
-    }
-
-    // const dynamicSearch = () => {
-    //     return props.dogs.filter(dog => dog.name.toLowerCase().includes(query.toLowerCase()));
-    // };
-
+const Search = (props) => {
     return (
-        <div>
-            <input 
-                type="text"
-                placeholder="Search for a Dog..."
-                value={query}
-                onChange={handleChange}
-            />
-            <ul>
-                {dynamicSearch(results)}
-            </ul>
-        </div>
-    );
-    }
+    <div>
+        <Form inline>
+          <FormControl type="text" value={props.query} placeholder="Search for a Dog..." className="mr-sm-2" onChange={props.handleChange} />
+          <Button onClick={props.dynamicSearch} variant="outline-primary">Search</Button>
+        </Form>
+        <br></br>
+    </div>
+    )
+}
+
 
 
 export default Search;
