@@ -9,12 +9,15 @@ Backend respository: https://github.com/ejgann/dogtrax-backend
 
 ### Frontend  
 * JavaScript
-* ReactJS v17.0.2
+* React.js v17.0.2
 * Redux
+* React Router - Declarative Routing
+* Custom CSS3 styling
 
 ### Backend  
-* Ruby [2.6.1]
-* Rails v6.1.3
+* Ruby v2.6.1
+* Rails v6.1.3 - MVC web framework used as an API
+* Active Model Serializers - Serializing API routes to JSON
 * PostgreSQL v11
 
 ## App Features
