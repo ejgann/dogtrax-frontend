@@ -22,7 +22,7 @@ Check it out:  [Backend Repo](https://github.com/ejgann/dogtrax-backend) ||  [De
 ## Installing
 
 ### Backend Installation:
-* Clone [backend Repo](https://github.com/ejgann/dogtrax-backend) to your local machine -- `git clone <backend-repo-url>`
+* Clone [backend repo](https://github.com/ejgann/dogtrax-backend) to your local machine -- `git clone <backend-repo-url>`
 * Run `bundle install` to install required dependencies
 * Ensure you have PostgreSQL installed and running
 * Run `rails db:create` to create a local database
