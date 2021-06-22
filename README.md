@@ -19,6 +19,24 @@ Check it out:  [Backend Repo](https://github.com/ejgann/dogtrax-backend) ||  [De
 * Active Model Serializers - Serializing API routes to JSON
 * PostgreSQL v11 - Database
 
+## Installing
+
+### Backend Installation:
+* Clone [backend Repo](https://github.com/ejgann/dogtrax-backend) to your local machine -- `git clone <backend-repo-url>`
+* Run `bundle install` to install required dependencies
+* Ensure you have PostgreSQL installed and running
+* Run `rails db:create` to create a local database
+* Run `rails db:migrate` to add tables to the database
+* Run `rails db:seed` to create seed data
+* Run `rails s` to start the rails server
+
+### Frontend Installation:
+* Clone this repo to your local machine -- `git clone <this-repo-url>`
+* Ensure the backend API is running at `http://localhost:3000/`
+* Run `npm install` to install all dependencies
+* Run `npm start` to start frontend server
+* When prompted, ensure frontend server is running at `http://localhost:3001/`
+
 ## Features
 On the homepage, a user can click the link to "Dog Clients" to see a full list of the dogs they currently walk.
 
