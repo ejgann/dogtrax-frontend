@@ -45,3 +45,9 @@ Clicking on a dog's name will take the user to that dog's individual page where 
 The user is able to edit the dog's basic information and also write a new report that will be added to the collection below.
 
 If a user has a new dog client that needs to be added, they can click on the link "Add New Dog" where they will be taken to a form to input the new dog's information.
+
+## Challenges
+Getting the hang of React and Redux was a big challenge for me. Understanding how to implement and manage state and determining where to do that (which class components) was challenging. I also struggled with keeping my project manageable and not letting myself run away with all of the ideas I had initially wanted to implement.
+
+## Future Implementations
+I have several ideas for this application that I want to implement in the future. I have grand visions for other features and other user stories to weave into the current implementation. I would also like to refactor this project using React hooks.
